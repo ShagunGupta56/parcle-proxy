@@ -28,6 +28,12 @@ app.post("/memory", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "Parcle Proxy Running"
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
